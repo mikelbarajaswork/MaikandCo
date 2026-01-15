@@ -1,0 +1,118 @@
+/* Estilos comunes para páginas legales */
+.legal-content {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.legal-content h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.legal-content h2 {
+    color: #34495e;
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.legal-content h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+}
+
+.legal-content p {
+    color: #495057;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content li {
+    color: #495057;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.legal-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.last-updated {
+    color: #6c757d;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Estilos específicos para términos y condiciones */
+.terms-section {
+    background: linear-gradient(to right, #f8f9fa, #fff);
+    border-left: 4px solid #3498db;
+}
+
+/* Estilos específicos para política de privacidad */
+.privacy-section {
+    background: linear-gradient(to right, #f8f9fa, #fff);
+    border-left: 4px solid #2ecc71;
+}
+
+/* Estilos específicos para política de cookies */
+.cookies-section {
+    background: linear-gradient(to right, #f8f9fa, #fff);
+    border-left: 4px solid #e74c3c;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 2rem 0;
+    }
+
+    .legal-content h1 {
+        font-size: 2rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .legal-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .legal-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .legal-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .legal-section {
+        padding: 1rem;
+    }
+} 

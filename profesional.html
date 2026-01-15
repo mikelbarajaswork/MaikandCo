@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maik&Co. - Plataforma para profesionales">
+    <title>Maik&Co. - Área Profesional</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profesional.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="mantenimiento.html" class="btn-primary">Plataforma</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Profesional -->
+        <section class="hero-profesional">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                    <h1>Únete a Nuestra Red de Profesionales</h1>
+                    <p class="hero-subtitle">Conecta con clientes, crece tu negocio y ofrece tus servicios en nuestra plataforma líder</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="profesionales-count">0</span>
+                            <span class="stat-label">Profesionales</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="servicios-count">0</span>
+                            <span class="stat-label">Servicios</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="clientes-count">0</span>
+                            <span class="stat-label">Clientes Satisfechos</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-lg" onclick="openRegisterModal()">Regístrate como Profesional</button>
+                        <a href="#benefits" class="btn btn-outline-light btn-lg">Conoce los Beneficios</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Video (debajo del hero) -->
+        <section class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Conoce la experiencia para Profesionales</h2>
+                <p class="section-subtitle">Cómo te ayudamos a conseguir clientes y gestionar tu negocio</p>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="150">
+                    <button class="btn btn-primary btn-large" onclick="openVideoModalPro()">
+                        <i class="fas fa-play"></i> Ver video
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section id="benefits" class="benefits" aria-labelledby="benefits-title">
+            <div class="container">
+                <h2 id="benefits-title" class="section-title" data-aos="fade-up">Beneficios para Profesionales</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-users"></i>
+                        <h3>Red de Clientes</h3>
+                        <p>Accede a una amplia red de clientes potenciales que buscan tus servicios específicos.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Crecimiento del Negocio</h3>
+                        <p>Herramientas y recursos para expandir tu negocio y aumentar tus ingresos.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-tools"></i>
+                        <h3>Herramientas Profesionales</h3>
+                        <p>Plataforma completa con herramientas de gestión, programación y comunicación.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-star"></i>
+                        <h3>Construye tu Reputación</h3>
+                        <p>Sistema de reseñas y valoraciones que te ayuda a destacar. Las buenas reseñas aumentan tu visibilidad y atraen más clientes.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Seguridad Garantizada</h3>
+                        <p>Trabaja con confianza gracias a nuestro sistema de pagos seguro y verificación de clientes. Protección contra impagos y garantía de satisfacción.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Gestión Eficiente</h3>
+                        <p>Organiza tu tiempo con nuestro sistema de calendario inteligente. Reservas online, recordatorios automáticos y gestión de disponibilidad.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-comments"></i>
+                        <h3>Comunicación Directa</h3>
+                        <p>Mantén una comunicación fluida con tus clientes a través de nuestra plataforma integrada. Chat en tiempo real y notificaciones instantáneas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes de Suscripción -->
+        <section id="planes" class="planes" aria-labelledby="planes-title">
+            <div class="container">
+                <h2 id="planes-title" class="section-title" data-aos="fade-up">Planes para Profesionales</h2>
+                <p class="section-subtitle" data-aos="fade-up">Elige el plan que mejor se adapte a tus necesidades</p>
+                
+                <div class="planes-grid">
+                    <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="plan-header">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Plan Básico</h3>
+                            <p class="plan-precio">Gratis</p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Perfil profesional básico</li>
+                                <li><i class="fas fa-check"></i> Hasta 5 servicios activos</li>
+                                <li><i class="fas fa-check"></i> Comisión del 15% por servicio</li>
+                                <li><i class="fas fa-check"></i> Soporte por email</li>
+                                <li><i class="fas fa-check"></i> Estadísticas básicas</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-outline-primary">Comenzar Gratis</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card destacado" data-aos="fade-up" data-aos-delay="200">
+                        <div class="plan-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Plan Premium</h3>
+                            <p class="plan-precio">29€<span>/mes</span></p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Todo lo del plan básico</li>
+                                <li><i class="fas fa-check"></i> Servicios ilimitados</li>
+                                <li><i class="fas fa-check"></i> Comisión reducida al 10%</li>
+                                <li><i class="fas fa-check"></i> Soporte prioritario 24/7</li>
+                                <li><i class="fas fa-check"></i> Perfil destacado en búsquedas</li>
+                                <li><i class="fas fa-check"></i> Estadísticas avanzadas</li>
+                                <li><i class="fas fa-check"></i> Marketing personalizado</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-primary">Elegir Premium</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="plan-header">
+                            <i class="fas fa-crown"></i>
+                            <h3>Plan Empresarial</h3>
+                            <p class="plan-precio">99€<span>/mes</span></p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Todo lo del plan Premium</li>
+                                <li><i class="fas fa-check"></i> Comisión mínima del 8%</li>
+                                <li><i class="fas fa-check"></i> Múltiples perfiles profesionales</li>
+                                <li><i class="fas fa-check"></i> Gestor de cuenta dedicado</li>
+                                <li><i class="fas fa-check"></i> API de integración</li>
+                                <li><i class="fas fa-check"></i> Reportes personalizados</li>
+                                <li><i class="fas fa-check"></i> Acceso a eventos exclusivos</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-outline-primary">Elegir Empresarial</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card" data-aos="fade-up" data-aos-delay="400" style="border: 2px solid #f59e0b;">
+                        <div class="plan-header" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                            <i class="fas fa-gem"></i>
+                            <h3>Plan VIP Profesional</h3>
+                            <p class="plan-precio">150€<span>/mes</span></p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Todo lo del plan Empresarial</li>
+                                <li><i class="fas fa-check"></i> Leads garantizados (mín. 10/mes)</li>
+                                <li><i class="fas fa-check"></i> Publicidad destacada en búsquedas</li>
+                                <li><i class="fas fa-check"></i> Herramientas de marketing avanzadas</li>
+                                <li><i class="fas fa-check"></i> Estadísticas predictivas y análisis</li>
+                                <li><i class="fas fa-check"></i> Soporte dedicado con gestor personal</li>
+                                <li><i class="fas fa-check"></i> Comisión reducida al 7%</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-primary" style="background: #f59e0b; border-color: #f59e0b;">Elegir VIP</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card" data-aos="fade-up" data-aos-delay="500" style="border: 2px solid #7c3aed;">
+                        <div class="plan-header" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);">
+                            <i class="fas fa-building"></i>
+                            <h3>Plan Empresa</h3>
+                            <p class="plan-precio">300€<span>/mes</span></p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Todo lo del plan VIP</li>
+                                <li><i class="fas fa-check"></i> Múltiples ubicaciones ilimitadas</li>
+                                <li><i class="fas fa-check"></i> Perfiles profesionales ilimitados</li>
+                                <li><i class="fas fa-check"></i> API completa con integración CRM</li>
+                                <li><i class="fas fa-check"></i> White-label para empresas</li>
+                                <li><i class="fas fa-check"></i> Reportes personalizados y consultoría</li>
+                                <li><i class="fas fa-check"></i> Comisión mínima del 6%</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-primary" style="background: #7c3aed; border-color: #7c3aed;">Elegir Empresa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="planes-info" data-aos="fade-up">
+                    <h3>¿Por qué elegir un plan de pago?</h3>
+                    <div class="planes-beneficios">
+                        <div class="beneficio">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Mayor Visibilidad</h4>
+                            <p>Tu perfil aparece en las primeras posiciones de búsqueda</p>
+                        </div>
+                        <div class="beneficio">
+                            <i class="fas fa-percentage"></i>
+                            <h4>Comisiones Reducidas</h4>
+                            <p>Ahorra hasta un 9% en cada servicio completado</p>
+                        </div>
+                        <div class="beneficio">
+                            <i class="fas fa-tools"></i>
+                            <h4>Herramientas Avanzadas</h4>
+                            <p>Accede a funcionalidades exclusivas para crecer tu negocio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicios Adicionales para Profesionales -->
+                <div class="planes-info" data-aos="fade-up" style="margin-top: 3rem;">
+                    <h3>Servicios Adicionales y Micro-transacciones</h3>
+                    <div class="planes-beneficios" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                        <div class="beneficio">
+                            <i class="fas fa-star"></i>
+                            <h4>Destacar Perfil</h4>
+                            <p>5-10€/semana - Aparece destacado en búsquedas</p>
+                        </div>
+                        <div class="beneficio">
+                            <i class="fas fa-badge-check"></i>
+                            <h4>Badge Premium</h4>
+                            <p>15€/mes - Badge "Verificado Premium" visible</p>
+                        </div>
+                        <div class="beneficio">
+                            <i class="fas fa-bullhorn"></i>
+                            <h4>Publicidad Interna</h4>
+                            <p>500-2.000€/mes - Banners destacados en búsquedas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comisiones Diferenciadas -->
+                <div class="planes-info" data-aos="fade-up" style="margin-top: 3rem;">
+                    <div style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(29, 78, 216, 0.05)); border: 2px solid rgba(37, 99, 235, 0.2); border-radius: 16px; padding: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;">Comisiones Diferenciadas por Tipo de Servicio</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                            <div>
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;"><i class="fas fa-home"></i> Servicios Alto Valor</h4>
+                                <p>Reformas >5.000€: <strong>Comisión 20-25%</strong> (garantiza máxima calidad y seguimiento)</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;"><i class="fas fa-tools"></i> Servicios Estándar</h4>
+                                <p>500-5.000€: <strong>15% (básico) / 10% (premium)</strong></p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;"><i class="fas fa-redo"></i> Servicios Recurrentes</h4>
+                                <p>Limpieza, mantenimiento: <strong>Comisión 8-10%</strong> (incentiva volumen)</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;"><i class="fas fa-exclamation-circle"></i> Servicios Urgentes</h4>
+                                <p>Emergencias: <strong>Comisión +5% adicional</strong> (garantiza disponibilidad)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SaaS Herramientas -->
+                <div class="planes-info" data-aos="fade-up" style="margin-top: 3rem;">
+                    <h3>Herramientas SaaS Adicionales (Suscripción Separada)</h3>
+                    <div class="planes-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 2rem;">
+                        <div class="plan-card" style="border: 1px solid var(--border-color);">
+                            <div class="plan-header" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                <i class="fas fa-calendar-alt"></i>
+                                <h3>Agenda Pro</h3>
+                                <p class="plan-precio">15€<span>/mes</span></p>
+                            </div>
+                            <div class="plan-content">
+                                <ul class="plan-caracteristicas">
+                                    <li><i class="fas fa-check"></i> Gestión avanzada de citas</li>
+                                    <li><i class="fas fa-check"></i> Disponibilidad automática</li>
+                                    <li><i class="fas fa-check"></i> Recordatorios SMS/Email</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-card" style="border: 1px solid var(--border-color);">
+                            <div class="plan-header" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                                <i class="fas fa-calculator"></i>
+                                <h3>Contabilidad Pro</h3>
+                                <p class="plan-precio">20€<span>/mes</span></p>
+                            </div>
+                            <div class="plan-content">
+                                <ul class="plan-caracteristicas">
+                                    <li><i class="fas fa-check"></i> Facturación automática</li>
+                                    <li><i class="fas fa-check"></i> Gestión IVA y gastos</li>
+                                    <li><i class="fas fa-check"></i> Reportes fiscales</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-card" style="border: 1px solid var(--border-color);">
+                            <div class="plan-header" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                <i class="fas fa-bullhorn"></i>
+                                <h3>Marketing Pro</h3>
+                                <p class="plan-precio">25€<span>/mes</span></p>
+                            </div>
+                            <div class="plan-content">
+                                <ul class="plan-caracteristicas">
+                                    <li><i class="fas fa-check"></i> Email campaigns</li>
+                                    <li><i class="fas fa-check"></i> SEO local</li>
+                                    <li><i class="fas fa-check"></i> Análisis de competencia</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-card destacado" style="border: 2px solid var(--primary-color);">
+                            <div class="plan-header">
+                                <i class="fas fa-box"></i>
+                                <h3>Paquete Completo</h3>
+                                <p class="plan-precio">50€<span>/mes</span></p>
+                            </div>
+                            <div class="plan-content">
+                                <ul class="plan-caracteristicas">
+                                    <li><i class="fas fa-check"></i> Todas las herramientas</li>
+                                    <li><i class="fas fa-check"></i> Ahorra 10€/mes</li>
+                                    <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso -->
+        <section id="process" class="process" aria-labelledby="process-title">
+            <div class="container">
+                <h2 id="process-title" class="section-title" data-aos="fade-up">Proceso de Registro</h2>
+                <div class="process-steps">
+                    <div class="step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">1</div>
+                        <h3>Completa tu Perfil</h3>
+                        <p>Registra tus datos profesionales y experiencia</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">2</div>
+                        <h3>Verificación</h3>
+                        <p>Validamos tu información en 24-48 horas</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">3</div>
+                        <h3>¡Comienza a Trabajar!</h3>
+                        <p>Accede a clientes y comienza a ofrecer tus servicios</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section id="categories" class="categories" aria-labelledby="categories-title">
+            <div class="container">
+                <h2 id="categories-title" class="section-title" data-aos="fade-up">Categorías de Servicios</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-home"></i>
+                        <h3>Servicios para el Hogar</h3>
+                        <p>Limpieza, mantenimiento, reparaciones</p>
+                        <a href="#" class="category-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-car"></i>
+                        <h3>Servicios Automotrices</h3>
+                        <p>Mecánica, detailing, transporte</p>
+                        <a href="#" class="category-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Servicios Profesionales</h3>
+                        <p>Consultoría, asesoría, diseño</p>
+                        <a href="#" class="category-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title" class="section-title" data-aos="fade-up">Lo que dicen nuestros profesionales</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-content">
+                            <p>"Maik&Co. ha transformado mi negocio. He podido expandir mi cartera de clientes y gestionar mis proyectos de manera más eficiente."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial-1.jpg" alt="María García">
+                            <div class="author-info">
+                                <h4>María García</h4>
+                                <p>Diseñadora de Interiores</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-content">
+                            <p>"La plataforma es intuitiva y las herramientas son excelentes. He podido organizar mejor mi tiempo y aumentar mis ingresos."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial-2.jpg" alt="Carlos Rodríguez">
+                            <div class="author-info">
+                                <h4>Carlos Rodríguez</h4>
+                                <p>Desarrollador Web</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title" class="section-title" data-aos="fade-up">Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3>¿Cuánto cuesta registrarse?</h3>
+                        <p>El registro es completamente gratuito. Solo cobramos una pequeña comisión por cada servicio completado.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3>¿Cómo recibo los pagos?</h3>
+                        <p>Los pagos se procesan a través de nuestra plataforma segura y se transfieren a tu cuenta bancaria.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3>¿Puedo elegir mis clientes?</h3>
+                        <p>Sí, tienes total libertad para aceptar o rechazar solicitudes de servicio según tu disponibilidad.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3>¿Qué requisitos necesito?</h3>
+                        <p>Necesitas documentación que acredite tu experiencia profesional, certificaciones relevantes y un historial de trabajos anteriores. El proceso de verificación es rápido y sencillo.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <h3>¿Cómo funciona el sistema de valoraciones?</h3>
+                        <p>Los clientes pueden calificarte después de cada servicio (1-5 estrellas) y dejar comentarios detallados. Las buenas valoraciones aumentan tu visibilidad en la plataforma.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                        <h3>¿Qué soporte ofrecéis?</h3>
+                        <p>Ofrecemos soporte técnico 24/7, asesoramiento profesional, herramientas de gestión y formación continua para ayudarte a crecer en tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 id="cta-title">¿Listo para Crecer tu Negocio?</h2>
+                    <p>Únete a nuestra comunidad de profesionales y comienza a ofrecer tus servicios hoy mismo.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary btn-lg">Regístrate Ahora</a>
+                        <a href="contacto.html" class="btn btn-outline-light btn-lg">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tarjetas de Valor -->
+        <section class="section">
+            <div class="container">
+                <div class="value-cards">
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Para Clientes</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Encuentra profesionales verificados</li>
+                            <li><i class="fas fa-check"></i> Precios transparentes</li>
+                            <li><i class="fas fa-check"></i> Sistema de pagos seguro</li>
+                            <li><i class="fas fa-check"></i> Reseñas y calificaciones</li>
+                        </ul>
+                        <a href="index.html" class="btn btn-primary">Buscar Servicios</a>
+                    </div>
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Para Profesionales</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Amplia red de clientes</li>
+                            <li><i class="fas fa-check"></i> Herramientas de gestión</li>
+                            <li><i class="fas fa-check"></i> Pagos garantizados</li>
+                            <li><i class="fas fa-check"></i> Soporte dedicado</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openRegisterModal()">Registrarse</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
+                    <a href="index.html" class="logo">
+                        <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                    </a>
+                    <p>Conectando profesionales y clientes en toda España</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="plataforma.html">Plataforma</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir las últimas novedades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Maik&Co. — Unimos personas, solucionamos problemas.</p>
+                <p>With ♥ from The Basque Country!</p>
+                <p>&copy; 2025 Maik & Co. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Registro de Profesional -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            
+            <div id="registerUserTypeSelection">
+                <h2>Registrarse</h2>
+                <p>Selecciona tu tipo de usuario:</p>
+                <div class="user-type-options">
+                    <button class="user-type-btn" onclick="showRegisterForm('cliente')">
+                        <i class="fas fa-user"></i>
+                        <span>Cliente</span>
+                    </button>
+                    <button class="user-type-btn" onclick="showRegisterForm('profesional')">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Profesional</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Formulario de registro para clientes -->
+            <div id="registerClienteForm" class="modal-form" style="display: none;">
+                <h2>Registro de Cliente</h2>
+                <form class="register-form" id="registerClienteFormElement">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerClienteNombre">Nombre completo *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="registerClienteNombre" name="nombre" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerClienteEmail">Email *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="registerClienteEmail" name="email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerClienteTelefono">Teléfono *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="registerClienteTelefono" name="telefono" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerClienteUbicacion">Ubicación *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" id="registerClienteUbicacion" name="ubicacion" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerClientePassword">Contraseña *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="registerClientePassword" name="password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerClienteConfirmPassword">Confirmar contraseña *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="registerClienteConfirmPassword" name="confirmPassword" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="registerClienteTerminos" name="terminos" required>
+                            <span class="checkmark"></span>
+                            Acepto los <a href="terminos.html" target="_blank">Términos y Condiciones</a> y la <a href="privacidad.html" target="_blank">Política de Privacidad</a> *
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-user-plus"></i>
+                        Registrarse como Cliente
+                    </button>
+                </form>
+                <div class="modal-links">
+                    <p>¿Ya tienes una cuenta? <a href="#" onclick="switchToLogin('cliente')">Inicia sesión</a></p>
+                </div>
+                <button class="btn btn-outline-secondary" onclick="backToUserTypeSelection('register')">
+                    <i class="fas fa-arrow-left"></i>
+                    Volver
+                </button>
+            </div>
+
+            <!-- Formulario de registro para profesionales -->
+            <div id="registerProfesionalForm" class="modal-form" style="display: none;">
+                <h2>Registro de Profesional</h2>
+                <form class="register-form" id="registerProfesionalFormElement">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerProfesionalNombre">Nombre completo *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="registerProfesionalNombre" name="nombre" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerProfesionalEmail">Email *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="registerProfesionalEmail" name="email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerProfesionalTelefono">Teléfono *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="registerProfesionalTelefono" name="telefono" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerProfesionalProfesion">Profesión *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-briefcase"></i>
+                                <select id="registerProfesionalProfesion" name="profesion" required>
+                                    <option value="">Selecciona tu profesión</option>
+                                    <option value="abogado">Abogado</option>
+                                    <option value="arquitecto">Arquitecto</option>
+                                    <option value="electricista">Electricista</option>
+                                    <option value="fontanero">Fontanero</option>
+                                    <option value="pintor">Pintor</option>
+                                    <option value="albañil">Albañil</option>
+                                    <option value="carpintero">Carpintero</option>
+                                    <option value="jardinero">Jardinero</option>
+                                    <option value="limpiador">Limpiador</option>
+                                    <option value="diseñador">Diseñador</option>
+                                    <option value="interiorista">Interiorista</option>
+                                    <option value="ingeniero">Ingeniero</option>
+                                    <option value="aparejador">Aparejador</option>
+                                    <option value="perito">Perito</option>
+                                    <option value="consultor">Consultor</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerProfesionalEspecialidad">Especialidad o área de trabajo</label>
+                        <div class="input-icon">
+                            <i class="fas fa-tools"></i>
+                            <input type="text" id="registerProfesionalEspecialidad" name="especialidad" placeholder="Ej: Derecho Civil, Instalaciones Eléctricas, etc.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerProfesionalUbicacion">Ubicación (Ciudad/Provincia) *</label>
+                        <div class="input-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" id="registerProfesionalUbicacion" name="ubicacion" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerProfesionalPassword">Contraseña *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="registerProfesionalPassword" name="password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerProfesionalConfirmPassword">Confirmar contraseña *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="registerProfesionalConfirmPassword" name="confirmPassword" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="registerProfesionalTerminos" name="terminos" required>
+                            <span class="checkmark"></span>
+                            Acepto los <a href="terminos.html" target="_blank">Términos y Condiciones</a> y la <a href="privacidad.html" target="_blank">Política de Privacidad</a> *
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-user-plus"></i>
+                        Registrarse como Profesional
+                    </button>
+                </form>
+                <div class="modal-links">
+                    <p>¿Ya tienes una cuenta? <a href="#" onclick="switchToLogin('profesional')">Inicia sesión</a></p>
+                </div>
+                <button class="btn btn-outline-secondary" onclick="backToUserTypeSelection('register')">
+                    <i class="fas fa-arrow-left"></i>
+                    Volver
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
+            // Manejo del menú móvil
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    menuBtn.classList.toggle('active');
+                });
+            }
+
+            // Cerrar menú al hacer clic en un enlace
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        menuBtn.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Funciones para los modales
+        function openRegisterModal() {
+            document.getElementById('registerModal').style.display = 'block';
+            resetRegisterModal();
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').style.display = 'none';
+        }
+
+        function showRegisterForm(type) {
+            if (type === 'cliente') {
+                document.getElementById('registerUserTypeSelection').style.display = 'none';
+                document.getElementById('registerClienteForm').style.display = 'block';
+            } else if (type === 'profesional') {
+                document.getElementById('registerUserTypeSelection').style.display = 'none';
+                document.getElementById('registerProfesionalForm').style.display = 'block';
+            }
+        }
+
+        function backToUserTypeSelection(modalType) {
+            if (modalType === 'register') {
+                document.getElementById('registerClienteForm').style.display = 'none';
+                document.getElementById('registerProfesionalForm').style.display = 'none';
+                document.getElementById('registerUserTypeSelection').style.display = 'block';
+            }
+        }
+
+        function resetRegisterModal() {
+            document.getElementById('registerUserTypeSelection').style.display = 'block';
+            document.getElementById('registerClienteForm').style.display = 'none';
+            document.getElementById('registerProfesionalForm').style.display = 'none';
+        }
+
+        // Función para cambiar de registro a login (placeholder)
+        function switchToLogin(type) {
+            // Por ahora solo cierra el modal de registro
+            closeRegisterModal();
+            // Aquí se podría implementar la lógica para abrir el modal de login
+            alert('Funcionalidad de login en desarrollo');
+        }
+
+        // Cerrar modales al hacer clic fuera de ellos
+        window.onclick = function(event) {
+            const registerModal = document.getElementById('registerModal');
+            
+            if (event.target === registerModal) {
+                closeRegisterModal();
+            }
+        }
+    </script>
+    <script src="js/contadores.js"></script>
+    <script src="js/registro.js"></script>
+    
+    <!-- Modal de Video Profesional -->
+    <div id="videoModalPro" class="modal" role="dialog" aria-modal="true" aria-labelledby="videoModalProTitle" style="display:none;">
+        <div class="modal-content" style="max-width:960px; width:90%;">
+            <span class="close" aria-label="Cerrar" onclick="closeVideoModalPro()">&times;</span>
+            <h2 id="videoModalProTitle" style="margin-bottom: 1rem;">Video para Profesionales</h2>
+            <div class="hero-video" style="margin-top:0; box-shadow:none;">
+                <video id="promoVideoPro" controls playsinline preload="metadata" poster="img/Profesionales.png" style="border-radius:12px;">
+                    <source src="Video/invideo-ai-1080 Maik & Co._ ¡Conecta con Profesionales e 2025-10-30(1).mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openVideoModalPro() {
+            const m = document.getElementById('videoModalPro');
+            if (!m) return;
+            m.style.display = 'block';
+        }
+        function closeVideoModalPro() {
+            const m = document.getElementById('videoModalPro');
+            const v = document.getElementById('promoVideoPro');
+            if (v) { try { v.pause(); v.currentTime = 0; } catch(e){} }
+            if (m) m.style.display = 'none';
+        }
+        window.addEventListener('click', function(e){
+            const m = document.getElementById('videoModalPro');
+            if (m && e.target === m) closeVideoModalPro();
+        });
+        document.addEventListener('keydown', function(e){
+            const m = document.getElementById('videoModalPro');
+            if (e.key === 'Escape' && m && m.style.display === 'block') closeVideoModalPro();
+        });
+    </script>
+    
+    <!-- Chatbot -->
+    <div id="assistantWidget" class="assistant-widget" aria-live="polite" aria-label="Asistente de ayuda" hidden>
+        <div class="assistant-header">
+            <div class="assistant-title">
+                <span class="assistant-avatar" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" fill="#2563eb"/>
+                        <rect x="18" y="24" width="28" height="20" rx="10" fill="#ffffff"/>
+                        <circle cx="26" cy="34" r="4" fill="#2563eb"/>
+                        <circle cx="38" cy="34" r="4" fill="#2563eb"/>
+                        <rect x="30" y="12" width="4" height="8" rx="2" fill="#ffffff"/>
+                    </svg>
+                </span>
+                <span>MaikBot</span>
+            </div>
+            <button class="assistant-close" aria-label="Cerrar" title="Cerrar" onclick="window.MaikAssistant?.toggle(false)">×</button>
+        </div>
+        <div id="assistantSuggestions" class="assistant-suggestions" role="list"></div>
+        <div id="assistantChat" class="assistant-chat" role="log" aria-live="polite" aria-relevant="additions"></div>
+        <form class="assistant-input" onsubmit="return window.MaikAssistant?.send(event)">
+            <input id="assistantUserInput" type="text" placeholder="Escribe tu pregunta..." aria-label="Escribir mensaje" autocomplete="off" required />
+            <button type="submit" class="btn-send" aria-label="Enviar"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+    <button id="assistantFab" class="assistant-fab" aria-label="Abrir asistente" title="Habla con MaikBot" onclick="window.MaikAssistant?.toggle()">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <script src="js/assistant.js"></script>
+</body>
+</html> 

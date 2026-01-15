@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Cliente - Maik & Co.</title>
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/plataforma-cliente.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Botón móvil para abrir sidebar -->
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Overlay para móvil -->
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#buscar" class="nav-item active" data-section="buscar">
+                    <i class="fas fa-search"></i>
+                    <span>Buscar profesionales</span>
+                </a>
+                <a href="#proyectos" class="nav-item" data-section="proyectos">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Mis proyectos</span>
+                </a>
+                <a href="#favoritos" class="nav-item" data-section="favoritos">
+                    <i class="fas fa-star"></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="#mensajes" class="nav-item" data-section="mensajes">
+                    <i class="fas fa-comments"></i>
+                    <span>Mensajes</span>
+                    <span class="badge-notification" id="mensajesBadge" style="display:none;">0</span>
+                </a>
+                <a href="#perfil" class="nav-item" data-section="perfil">
+                    <i class="fas fa-user"></i>
+                    <span>Mi perfil</span>
+                </a>
+                <a href="#pagos" class="nav-item" data-section="pagos">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Pagos y Facturas</span>
+                </a>
+                <a href="#soporte" class="nav-item" data-section="soporte">
+                    <i class="fas fa-headset"></i>
+                    <span>Soporte</span>
+                </a>
+                <a href="#" class="nav-item logout" onclick="cerrarSesion()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="dashboard-main">
+            <!-- Sección Buscar Profesionales -->
+            <section id="buscar" class="dashboard-section active">
+                <div class="section-header">
+                    <h1><i class="fas fa-search"></i> Buscar Profesionales</h1>
+                    <p>Encuentra el profesional perfecto para tu proyecto</p>
+                </div>
+
+                <!-- Buscador Principal -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Buscar por profesión, especialidad o nombre..." autocomplete="off">
+                        <button class="btn-search" id="btnBuscar">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filtros -->
+                <div class="filters-container">
+                    <div class="filters-header">
+                        <h3><i class="fas fa-filter"></i> Filtros</h3>
+                        <button class="btn-toggle-filters" id="btnToggleFilters" aria-label="Mostrar/ocultar filtros" title="Mostrar/ocultar filtros">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="filters-content" id="filtersContent">
+                        <div class="filter-group">
+                            <label><i class="fas fa-briefcase"></i> Categoría</label>
+                            <select id="filterCategoria" onchange="aplicarFiltros()" aria-label="Filtrar por categoría" title="Filtrar por categoría">
+                                <option value="">Todas las categorías</option>
+                                <option value="legal">Servicios Legales</option>
+                                <option value="construccion">Construcción y Reformas</option>
+                                <option value="instalaciones">Instalaciones</option>
+                                <option value="acabados">Acabados</option>
+                                <option value="diseno">Diseño y Decoración</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                                <option value="especialistas">Especialistas</option>
+                                <option value="tecnologia">Tecnología y Sistemas</option>
+                                <option value="mudanzas">Mudanzas y Transporte</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Ubicación</label>
+                            <input type="text" id="filterUbicacion" placeholder="Ciudad o provincia..." oninput="aplicarFiltros()">
+                        </div>
+                        <div class="filter-group">
+                            <label><i class="fas fa-star"></i> Valoración mínima</label>
+                            <select id="filterValoracion" onchange="aplicarFiltros()" aria-label="Filtrar por valoración mínima" title="Filtrar por valoración mínima">
+                                <option value="">Todas</option>
+                                <option value="4.5">4.5 estrellas o más</option>
+                                <option value="4">4 estrellas o más</option>
+                                <option value="3">3 estrellas o más</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label><i class="fas fa-euro-sign"></i> Precio máximo</label>
+                            <input type="number" id="filterPrecio" placeholder="€" min="0" oninput="aplicarFiltros()">
+                        </div>
+                        <div class="filter-group">
+                            <label><i class="fas fa-check-circle"></i> Verificados</label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="filterVerificado" onchange="aplicarFiltros()">
+                                <span class="checkmark"></span>
+                                Solo profesionales verificados
+                            </label>
+                        </div>
+                        <div class="filter-group">
+                            <label><i class="fas fa-clock"></i> Disponibilidad</label>
+                            <select id="filterDisponibilidad" onchange="aplicarFiltros()" aria-label="Filtrar por disponibilidad" title="Filtrar por disponibilidad">
+                                <option value="">Todas</option>
+                                <option value="inmediata">Disponibilidad inmediata</option>
+                                <option value="semana">Esta semana</option>
+                                <option value="mes">Este mes</option>
+                            </select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn btn-secondary" id="btnLimpiarFiltros">
+                                <i class="fas fa-times"></i> Limpiar filtros
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultados -->
+                <div class="results-container">
+                    <div class="results-header">
+                        <h2 id="resultsCount">0 profesionales encontrados</h2>
+                        <div class="results-sort">
+                            <label>Ordenar por:</label>
+                            <select id="sortBy" aria-label="Ordenar resultados" title="Ordenar resultados">
+                                <option value="relevancia">Relevancia</option>
+                                <option value="valoracion">Mejor valorados</option>
+                                <option value="precio-asc">Precio: menor a mayor</option>
+                                <option value="precio-desc">Precio: mayor a menor</option>
+                                <option value="proximidad">Más cercanos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Estado de carga -->
+                    <div id="loadingState" class="loading-state" style="display:none;">
+                        <div class="spinner"></div>
+                        <p>Cargando profesionales...</p>
+                    </div>
+                    <div id="resultados-profesionales" class="profesionales-grid">
+                        <!-- Los resultados se cargarán aquí dinámicamente -->
+                    </div>
+                </div>
+                
+                <!-- Badges de Confianza -->
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Pagos protegidos</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Profesionales verificados</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Garantía Maik & Co.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Mis Proyectos -->
+            <section id="proyectos" class="dashboard-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-folder-open"></i> Mis Proyectos</h1>
+                    <p>Gestiona tus proyectos y servicios contratados</p>
+                </div>
+                <div class="proyectos-container">
+                    <div class="proyectos-tabs">
+                        <button class="tab-btn active" data-proyecto-tab="activos">
+                            <i class="fas fa-clock"></i> Activos
+                        </button>
+                        <button class="tab-btn" data-proyecto-tab="completados">
+                            <i class="fas fa-check-circle"></i> Completados
+                        </button>
+                        <button class="tab-btn" data-proyecto-tab="cancelados">
+                            <i class="fas fa-times-circle"></i> Cancelados
+                        </button>
+                    </div>
+                    <div id="proyectos-lista" class="proyectos-lista">
+                        <!-- Los proyectos se cargarán aquí -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Favoritos -->
+            <section id="favoritos" class="dashboard-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-star"></i> Mis Favoritos</h1>
+                    <p>Profesionales guardados para contratar más tarde</p>
+                </div>
+                <div id="favoritos-lista" class="favoritos-lista">
+                    <!-- Los favoritos se cargarán aquí -->
+                </div>
+            </section>
+
+            <!-- Sección Mensajes -->
+            <section id="mensajes" class="dashboard-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-comments"></i> Mensajes</h1>
+                    <p>Comunícate con los profesionales directamente</p>
+                </div>
+                <div class="mensajes-container">
+                    <div class="mensajes-sidebar">
+                        <div class="mensajes-search">
+                            <input type="text" id="buscarMensajes" placeholder="Buscar conversación...">
+                        </div>
+                        <div id="conversaciones-lista" class="conversaciones-lista">
+                            <!-- Las conversaciones se cargarán aquí -->
+                        </div>
+                    </div>
+                    <div class="mensajes-content">
+                        <div class="empty-state" id="mensajesEmptyState">
+                            <i class="fas fa-comments"></i>
+                            <h3>No hay conversaciones</h3>
+                            <p>Cuando contactes con un profesional, tus mensajes aparecerán aquí</p>
+                        </div>
+                        <div id="mensajeDetalle" style="display:none;">
+                            <!-- Detalle de mensaje se cargará aquí -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Pagos y Facturas -->
+            <section id="pagos" class="dashboard-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-credit-card"></i> Pagos y Facturas</h1>
+                    <p>Gestiona tus pagos, facturas y reembolsos</p>
+                </div>
+                <div class="pagos-container">
+                    <div class="pagos-tabs">
+                        <button class="tab-btn active" data-tab="facturas">
+                            <i class="fas fa-file-invoice"></i> Facturas
+                        </button>
+                        <button class="tab-btn" data-tab="pagos">
+                            <i class="fas fa-credit-card"></i> Pagos
+                        </button>
+                        <button class="tab-btn" data-tab="reembolsos">
+                            <i class="fas fa-undo"></i> Reembolsos
+                        </button>
+                    </div>
+                    <div id="pagos-content" class="pagos-content">
+                        <div class="empty-state">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <h3>No hay registros aún</h3>
+                            <p>Cuando realices un pago, aparecerá aquí</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Mi Perfil -->
+            <section id="perfil" class="dashboard-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-user"></i> Mi Perfil</h1>
+                    <p>Gestiona tu información personal y configuración de cuenta</p>
+                </div>
+                <div class="perfil-container">
+                    <form class="perfil-form" id="perfilForm">
+                        <div class="perfil-avatar-section">
+                            <div class="perfil-avatar-container">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Avatar" class="perfil-avatar" id="avatarPreview">
+                                <label class="avatar-upload-btn">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Cambiar foto</span>
+                                    <input type="file" accept="image/*" style="display:none" id="avatarInput">
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="perfil-fields">
+                            <div class="perfil-section-title">
+                                <i class="fas fa-user-circle"></i>
+                                <h3>Información Personal</h3>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-user"></i>
+                                        Nombre completo
+                                    </label>
+                                    <input type="text" id="perfilNombre" name="nombre" value="" placeholder="Tu nombre completo" required>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-envelope"></i>
+                                        Email
+                                    </label>
+                                    <input type="email" id="perfilEmail" name="email" value="" placeholder="tu@email.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-phone"></i>
+                                        Teléfono
+                                    </label>
+                                    <input type="tel" id="perfilTelefono" name="telefono" value="" placeholder="+34 600 000 000" required>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Dirección
+                                    </label>
+                                    <input type="text" id="perfilDireccion" name="direccion" value="" placeholder="Tu dirección" required>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-city"></i>
+                                        Ciudad/Provincia
+                                    </label>
+                                    <input type="text" id="perfilCiudad" name="ciudad" value="" placeholder="Ciudad, provincia" required>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-birthday-cake"></i>
+                                        Fecha de nacimiento
+                                    </label>
+                                    <input type="date" id="perfilFechaNacimiento" name="fecha_nacimiento" value="" required aria-label="Fecha de nacimiento" title="Fecha de nacimiento">
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-venus-mars"></i>
+                                        Género
+                                    </label>
+                                    <select id="perfilGenero" name="genero" required aria-label="Género" title="Género">
+                                        <option value="">Selecciona</option>
+                                        <option value="hombre">Hombre</option>
+                                        <option value="mujer">Mujer</option>
+                                        <option value="otro">Otro</option>
+                                        <option value="no-decir">Prefiero no decirlo</option>
+                                    </select>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-lock"></i>
+                                        Contraseña
+                                    </label>
+                                    <div class="password-field">
+                                        <input type="password" id="passwordInputPerfil" name="password" value="" placeholder="Nueva contraseña" required>
+                                        <button type="button" class="show-pass-btn" onclick="togglePasswordPerfil()" aria-label="Mostrar/ocultar contraseña">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Guardar cambios
+                                </button>
+                                <button type="button" class="btn btn-secondary delete-account-btn" onclick="confirmDelete()">
+                                    <i class="fas fa-trash-alt"></i>
+                                    Eliminar cuenta
+                                </button>
+                            </div>
+                            
+                            <div class="perfil-feedback" id="perfilFeedback" style="display:none;">
+                                <i class="fas fa-check-circle"></i>
+                                <span>¡Cambios guardados correctamente!</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Sección Soporte -->
+            <section id="soporte" class="dashboard-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-headset"></i> Soporte</h1>
+                    <p>¿Necesitas ayuda? Estamos aquí para ti</p>
+                </div>
+                
+                <div class="soporte-container">
+                    <!-- Tarjetas de opciones principales -->
+                    <div class="soporte-cards">
+                        <div class="soporte-card">
+                            <div class="soporte-card-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h3>Preguntas Frecuentes</h3>
+                            <p>Encuentra respuestas rápidas a las preguntas más comunes sobre la plataforma</p>
+                            <a href="faq.html" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver FAQ
+                            </a>
+                        </div>
+                        
+                        <div class="soporte-card">
+                            <div class="soporte-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Contacto por Email</h3>
+                            <p>Escríbenos y te responderemos en menos de 24 horas</p>
+                            <a href="contacto.html" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar mensaje
+                            </a>
+                        </div>
+                        
+                        <div class="soporte-card">
+                            <div class="soporte-card-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Chat en vivo</h3>
+                            <p>Habla directamente con nuestro equipo de soporte</p>
+                            <button class="btn btn-primary" onclick="abrirChat()">
+                                <i class="fas fa-comment-dots"></i>
+                                Abrir chat
+                            </button>
+                        </div>
+                        
+                        <div class="soporte-card">
+                            <div class="soporte-card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Llamada telefónica</h3>
+                            <p>Habla con nosotros por teléfono de lunes a viernes</p>
+                            <a href="tel:+34600000000" class="btn btn-primary">
+                                <i class="fas fa-phone"></i>
+                                Llamar ahora
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Información de contacto -->
+                    <div class="soporte-info-card">
+                        <div class="soporte-info-header">
+                            <i class="fas fa-info-circle"></i>
+                            <h3>Información de contacto</h3>
+                        </div>
+                        <div class="contact-info-grid">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:soporte@maikandco.com">soporte@maikandco.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Teléfono</h4>
+                                    <a href="tel:+34600000000">+34 600 000 000</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Horario de atención</h4>
+                                    <p>Lunes a Viernes: 9:00 - 18:00<br>
+                                    Sábados: 10:00 - 14:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Oficina</h4>
+                                    <p>País Vasco, España</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Temas de ayuda comunes -->
+                    <div class="soporte-temas">
+                        <h3 class="temas-title">
+                            <i class="fas fa-lightbulb"></i>
+                            Temas de ayuda comunes
+                        </h3>
+                        <div class="temas-grid">
+                            <div class="tema-card" onclick="abrirTema('registro')">
+                                <i class="fas fa-user-plus"></i>
+                                <h4>Registro y cuenta</h4>
+                                <p>Cómo crear cuenta, recuperar contraseña, etc.</p>
+                            </div>
+                            
+                            <div class="tema-card" onclick="abrirTema('pagos')">
+                                <i class="fas fa-credit-card"></i>
+                                <h4>Pagos y facturación</h4>
+                                <p>Métodos de pago, comisiones, reembolsos</p>
+                            </div>
+                            
+                            <div class="tema-card" onclick="abrirTema('contratar')">
+                                <i class="fas fa-handshake"></i>
+                                <h4>Contratar profesionales</h4>
+                                <p>Cómo buscar, contratar y gestionar servicios</p>
+                            </div>
+                            
+                            <div class="tema-card" onclick="abrirTema('problemas')">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h4>Problemas y disputas</h4>
+                                <p>Resolución de conflictos y garantías</p>
+                            </div>
+                            
+                            <div class="tema-card" onclick="abrirTema('seguridad')">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Seguridad y privacidad</h4>
+                                <p>Protección de datos y seguridad</p>
+                            </div>
+                            
+                            <div class="tema-card" onclick="abrirTema('planes')">
+                                <i class="fas fa-crown"></i>
+                                <h4>Planes y suscripciones</h4>
+                                <p>Información sobre planes premium</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario de solicitud de ayuda -->
+                    <div class="soporte-form-card">
+                        <div class="soporte-form-header">
+                            <i class="fas fa-paper-plane"></i>
+                            <h3>Envíanos tu consulta</h3>
+                            <p>Rellena el formulario y te responderemos lo antes posible</p>
+                        </div>
+                        <form class="soporte-form" id="soporteForm" onsubmit="enviarConsulta(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fas fa-tag"></i>
+                                        Tipo de consulta
+                                    </label>
+                                    <select id="tipoConsulta" required aria-label="Tipo de consulta" title="Tipo de consulta">
+                                        <option value="">Selecciona un tema</option>
+                                        <option value="tecnica">Problema técnico</option>
+                                        <option value="cuenta">Cuenta y perfil</option>
+                                        <option value="pago">Pagos y facturación</option>
+                                        <option value="servicio">Problema con servicio</option>
+                                        <option value="general">Consulta general</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        Prioridad
+                                    </label>
+                                    <select id="prioridadConsulta" required aria-label="Prioridad de la consulta" title="Prioridad de la consulta">
+                                        <option value="baja">Baja</option>
+                                        <option value="media" selected>Media</option>
+                                        <option value="alta">Alta</option>
+                                        <option value="urgente">Urgente</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <i class="fas fa-heading"></i>
+                                    Asunto
+                                </label>
+                                <input type="text" id="asuntoConsulta" placeholder="Resumen breve de tu consulta" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <i class="fas fa-align-left"></i>
+                                    Descripción detallada
+                                </label>
+                                <textarea id="descripcionConsulta" rows="6" placeholder="Describe tu consulta o problema con el mayor detalle posible..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="aceptarTerminos" required>
+                                    <span class="checkmark"></span>
+                                    Acepto que mis datos sean tratados según la <a href="privacidad.html" target="_blank">Política de Privacidad</a>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar consulta
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal de Detalles del Profesional -->
+    <div id="profesionalModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="cerrarModalProfesional()">&times;</span>
+            <div id="profesionalModalContent">
+                <!-- Contenido del modal se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/plataforma-cliente.js"></script>
+</body>
+</html>
+

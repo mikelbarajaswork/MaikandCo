@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Maik&Co. - Noticias, consejos y novedades sobre servicios profesionales.">
+    <title>Blog - Maik&Co.</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="mantenimiento.html" class="btn-primary">Plataforma</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Blog de Maik&Co</h1>
+                <p>Descubre consejos, tendencias y novedades del sector</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary historia-btn">Nuestra Historia</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popup de Historia -->
+        <div class="historia-popup">
+            <div class="historia-popup-content">
+                <button class="cerrar-popup">&times;</button>
+                <h2>Nuestra Historia</h2>
+                <p>Todo comenzó cuando nos dimos cuenta de que encontrar profesionales de confianza para reformas y obras era un verdadero desafío. Como propietarios, nos enfrentábamos a:</p>
+                <ul class="historia-lista">
+                    <li>Dificultad para encontrar profesionales cualificados</li>
+                    <li>Falta de transparencia en los presupuestos</li>
+                    <li>Problemas de comunicación y seguimiento</li>
+                    <li>Incertidumbre sobre la calidad del trabajo</li>
+                </ul>
+                <p>Por eso creamos Maik&Co, una plataforma que conecta a propietarios con profesionales verificados, ofreciendo transparencia, confianza y calidad en cada proyecto.</p>
+                <a href="nuestra-historia.html" class="btn">Leer más</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Layout principal del blog: destacado + chips + grid con sidebar -->
+            <section class="featured-post" data-aos="fade-up" data-category="Tendencias">
+                <div class="featured-media">
+                    <div class="featured-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&h=900&q=90" alt="Interior moderno con diseño sostenible" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                    <div class="featured-badge">Artículo Destacado</div>
+                </div>
+                <div class="featured-content">
+                    <div class="post-meta">
+                        <span class="meta-item"><i class="far fa-calendar"></i> 15 Marzo, 2025</span>
+                        <span class="meta-item category-badge category-tendencias"><i class="far fa-folder"></i> Tendencias</span>
+                    </div>
+                    <h2>Tendencias en Reformas para 2025: Diseño Sostenible y Eficiencia Energética</h2>
+                    <p>Las reformas del 2025 apuestan por eficiencia energética, materiales sostenibles y tecnología doméstica inteligente. Te contamos cómo aplicarlo en tu hogar y ahorrar hasta un 40% en tu factura energética.</p>
+                    <a href="#" class="btn btn-primary btn-featured">
+                        Leer artículo completo
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+
+            <div class="category-chips" data-aos="fade-up" aria-label="Categorías">
+                <button class="chip active" type="button" data-category="all">Todas</button>
+                <button class="chip" type="button" data-category="Tendencias">Tendencias</button>
+                <button class="chip" type="button" data-category="Guías">Guías</button>
+                <button class="chip" type="button" data-category="Legal">Legal</button>
+                <button class="chip" type="button" data-category="Sostenibilidad">Sostenibilidad</button>
+                <button class="chip" type="button" data-category="Consejos">Consejos</button>
+                <button class="chip" type="button" data-category="Materiales">Materiales</button>
+            </div>
+
+            <div class="blog-layout" data-aos="fade-up">
+                <div class="blog-main">
+                    <!-- Grid de 2 columnas - Artículos uniformes -->
+                    <!-- Artículo 1 - Tendencias -->
+                    <article class="blog-post" data-category="Tendencias">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&h=800&q=90" alt="Interior moderno con diseño contemporáneo" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-tendencias">Tendencias</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 15 Marzo, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Tendencias en Reformas para 2025: Diseño Sostenible y Eficiencia Energética</h2>
+                            <p class="post-excerpt">Descubre las últimas tendencias en reformas que están marcando el 2025, desde materiales sostenibles hasta soluciones inteligentes para el hogar que transformarán tu espacio.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 2 - Guías -->
+                    <article class="blog-post" data-category="Guías">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=800&q=90" alt="Calculadora y documentos de presupuesto" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-guias">Guías</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 10 Marzo, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 8 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Guía Completa: Cómo Calcular el Presupuesto de tu Reforma</h2>
+                            <p class="post-excerpt">Aprende a planificar y calcular el presupuesto de tu reforma paso a paso, incluyendo consejos para optimizar costes y evitar sorpresas inesperadas.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3 - Legal -->
+                    <article class="blog-post" data-category="Legal">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&h=800&q=90" alt="Documentos legales y permisos de obra" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-legal">Legal</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 5 Marzo, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 6 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Todo lo que Necesitas Saber sobre Permisos de Obra en España</h2>
+                            <p class="post-excerpt">Una guía detallada sobre los permisos necesarios para realizar obras y reformas en tu vivienda, según la normativa actual española.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 4 - Sostenibilidad -->
+                    <article class="blog-post" data-category="Sostenibilidad">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&h=800&q=90" alt="Paneles solares y energía renovable" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-sostenibilidad">Sostenibilidad</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 1 Marzo, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 7 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Mejora la Eficiencia Energética de tu Hogar: Soluciones Prácticas</h2>
+                            <p class="post-excerpt">Conoce las mejores soluciones para mejorar la eficiencia energética de tu vivienda y reducir el consumo de energía hasta en un 50%.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 5 - Consejos -->
+                    <article class="blog-post" data-category="Consejos">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f056e5e?auto=format&fit=crop&w=1200&h=800&q=90" alt="Profesional de construcción trabajando" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-consejos">Consejos</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 25 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 6 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Cómo Elegir el Profesional Adecuado para tu Proyecto</h2>
+                            <p class="post-excerpt">Guía práctica para encontrar y seleccionar el profesional más adecuado para tu proyecto de reforma o construcción, con consejos de verificación.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 6 - Materiales -->
+                    <article class="blog-post" data-category="Materiales">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&h=800&q=90" alt="Materiales de construcción sostenibles" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-materiales">Materiales</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 20 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Materiales Sostenibles: El Futuro de la Construcción</h2>
+                            <p class="post-excerpt">Descubre los materiales más innovadores y sostenibles que están revolucionando el sector de la construcción y cómo utilizarlos en tu proyecto.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 7 - Tendencias -->
+                    <article class="blog-post" data-category="Tendencias">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=800&q=90" alt="Cocina moderna reformada" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-tendencias">Tendencias</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 18 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 4 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Reformas de Cocina: Ideas Modernas 2025</h2>
+                            <p class="post-excerpt">Tendencias actuales en diseño de cocinas que combinan estilo y funcionalidad. Descubre las últimas innovaciones en espacios culinarios.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 8 - Guías -->
+                    <article class="blog-post" data-category="Guías">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&h=800&q=90" alt="Baño reformado moderno" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-guias">Guías</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 15 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 6 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Guía Rápida: Reforma de Baños</h2>
+                            <p class="post-excerpt">Pasos esenciales para planificar tu reforma de baño sin complicaciones. Desde la elección de materiales hasta la gestión del proyecto.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 9 - Consejos -->
+                    <article class="blog-post" data-category="Consejos">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&h=800&q=90" alt="Herramientas de construcción" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-consejos">Consejos</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 12 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Herramientas Esenciales para tu Proyecto de Reforma</h2>
+                            <p class="post-excerpt">Descubre qué herramientas necesitas realmente para llevar a cabo tu reforma de forma eficiente y segura. Lista completa y recomendaciones profesionales.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 10 - Materiales -->
+                    <article class="blog-post" data-category="Materiales">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&h=800&q=90" alt="Madera sostenible" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-materiales">Materiales</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 10 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 4 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Madera Certificada: La Mejor Opción</h2>
+                            <p class="post-excerpt">Por qué elegir madera con certificación FSC para tus proyectos. Beneficios ambientales y calidad garantizada para tu reforma.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 11 - Sostenibilidad -->
+                    <article class="blog-post" data-category="Sostenibilidad">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=1200&h=800&q=90" alt="Aislamiento térmico" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-sostenibilidad">Sostenibilidad</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 8 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 7 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Aislamiento Térmico: Guía Completa</h2>
+                            <p class="post-excerpt">Mejora la eficiencia de tu hogar con el aislamiento adecuado. Tipos de materiales, costes y retorno de inversión explicados.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 12 - Legal -->
+                    <article class="blog-post" data-category="Legal">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&h=800&q=90" alt="Seguro de obra" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-legal">Legal</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 5 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 6 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Seguros de Obra: Todo lo que Debes Saber</h2>
+                            <p class="post-excerpt">Protege tu inversión con el seguro adecuado. Te explicamos qué coberturas son esenciales y cómo elegir la mejor opción para tu proyecto.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 13 - Tendencias -->
+                    <article class="blog-post" data-category="Tendencias">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&h=800&q=90" alt="Salón moderno minimalista" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-tendencias">Tendencias</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 3 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Minimalismo en el Hogar: Tendencias 2025</h2>
+                            <p class="post-excerpt">El estilo minimalista sigue marcando tendencia. Descubre cómo aplicar este diseño limpio y funcional en tu hogar.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 14 - Guías -->
+                    <article class="blog-post" data-category="Guías">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&h=800&q=90" alt="Planos de reforma" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-guias">Guías</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 1 Febrero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 8 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Cómo Planificar tu Reforma Integral: Paso a Paso</h2>
+                            <p class="post-excerpt">Guía completa para planificar una reforma integral de tu vivienda. Desde el diseño inicial hasta la ejecución final del proyecto.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 15 - Consejos -->
+                    <article class="blog-post" data-category="Consejos">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&h=800&q=90" alt="Contratación de profesionales" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-consejos">Consejos</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 28 Enero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 6 min lectura</span>
+                            </div>
+                            <h2 class="post-title">5 Errores Comunes al Contratar un Profesional</h2>
+                            <p class="post-excerpt">Evita los errores más frecuentes al contratar profesionales para tu reforma. Aprende de experiencias reales y toma decisiones informadas.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 16 - Materiales -->
+                    <article class="blog-post" data-category="Materiales">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&h=800&q=90" alt="Cerámica y azulejos" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-materiales">Materiales</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 25 Enero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Guía de Cerámica y Azulejos: Tipos y Aplicaciones</h2>
+                            <p class="post-excerpt">Todo lo que necesitas saber sobre cerámica y azulejos para tu reforma. Tipos, características y dónde utilizarlos en tu hogar.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 17 - Sostenibilidad -->
+                    <article class="blog-post" data-category="Sostenibilidad">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&w=1200&h=800&q=90" alt="Ventanas eficientes" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-sostenibilidad">Sostenibilidad</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 22 Enero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 6 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Ventanas de Alto Rendimiento: Ahorro y Confort</h2>
+                            <p class="post-excerpt">Las ventanas eficientes pueden reducir tu factura energética hasta un 30%. Descubre qué características buscar y cómo elegirlas.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 18 - Tendencias -->
+                    <article class="blog-post" data-category="Tendencias">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600607688969-a5fcd52667ef?auto=format&fit=crop&w=1200&h=800&q=90" alt="Smart home" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-tendencias">Tendencias</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 20 Enero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 7 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Domótica en el Hogar: Transforma tu Casa en Smart Home</h2>
+                            <p class="post-excerpt">La automatización del hogar está al alcance de todos. Descubre cómo integrar tecnología inteligente en tu reforma y mejorar tu calidad de vida.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 19 - Legal -->
+                    <article class="blog-post" data-category="Legal">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&h=800&q=90" alt="Contrato de obra" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-legal">Legal</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 18 Enero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 6 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Contrato de Obra: Qué Debe Incluir y Cómo Protegerte</h2>
+                            <p class="post-excerpt">Un buen contrato es fundamental para proteger tu inversión. Te explicamos qué cláusulas son esenciales y cómo evitar problemas legales.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 20 - Guías -->
+                    <article class="blog-post" data-category="Guías">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600607688969-a5fcd52667ef?auto=format&fit=crop&w=1200&h=800&q=90" alt="Mantenimiento del hogar" class="post-image" loading="lazy" onerror="this.onerror=null;this.src='img/Profesionales.png'">
+                            <div class="post-category-overlay category-guias">Guías</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="meta-item"><i class="far fa-calendar"></i> 15 Enero, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <h2 class="post-title">Mantenimiento Post-Reforma: Consejos para Conservar tu Hogar</h2>
+                            <p class="post-excerpt">Después de una reforma, el mantenimiento es clave. Aprende cómo cuidar tu inversión y mantener tu hogar en perfecto estado durante años.</p>
+                            <div class="post-footer">
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-button" aria-label="Compartir en Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-button" aria-label="Compartir en LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Paginación -->
+                    <nav class="blog-pagination" aria-label="Paginación">
+                        <a href="#" class="page prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="page active">1</a>
+                        <a href="#" class="page">2</a>
+                        <a href="#" class="page">3</a>
+                        <a href="#" class="page next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></a>
+                    </nav>
+                </div>
+
+                <aside class="blog-aside" aria-label="Barra lateral del blog">
+                    <div class="aside-card">
+                        <h3><i class="fas fa-fire"></i> En tendencia</h3>
+                        <ul class="aside-list">
+                            <li><a href="#"><span class="trend-number">1</span> Eficiencia energética en 5 pasos</a></li>
+                            <li><a href="#"><span class="trend-number">2</span> Cómo comparar presupuestos correctamente</a></li>
+                            <li><a href="#"><span class="trend-number">3</span> Top 7 materiales sostenibles</a></li>
+                            <li><a href="#"><span class="trend-number">4</span> Reformas de cocina 2025</a></li>
+                            <li><a href="#"><span class="trend-number">5</span> Guía completa de permisos</a></li>
+                        </ul>
+                    </div>
+                    <div class="aside-card">
+                        <h3><i class="fas fa-folder-open"></i> Categorías</h3>
+                        <ul class="aside-categories">
+                            <li><a href="#"><i class="fas fa-chart-line"></i> Tendencias <span class="category-count">(4)</span></a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Guías <span class="category-count">(4)</span></a></li>
+                            <li><a href="#"><i class="fas fa-gavel"></i> Legal <span class="category-count">(3)</span></a></li>
+                            <li><a href="#"><i class="fas fa-leaf"></i> Sostenibilidad <span class="category-count">(3)</span></a></li>
+                            <li><a href="#"><i class="fas fa-lightbulb"></i> Consejos <span class="category-count">(3)</span></a></li>
+                            <li><a href="#"><i class="fas fa-cubes"></i> Materiales <span class="category-count">(3)</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="aside-card">
+                        <h3><i class="fas fa-clock"></i> Artículos Recientes</h3>
+                        <ul class="aside-list recent-posts">
+                            <li>
+                                <a href="#">
+                                    <div class="recent-post-image">
+                                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=150&h=100&q=80" alt="Post reciente">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h4>Minimalismo en el Hogar</h4>
+                                        <span class="recent-date">3 Feb, 2025</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="recent-post-image">
+                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=150&h=100&q=80" alt="Post reciente">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h4>Reformas de Cocina 2025</h4>
+                                        <span class="recent-date">18 Feb, 2025</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="recent-post-image">
+                                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=150&h=100&q=80" alt="Post reciente">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h4>Guía Rápida: Reforma de Baños</h4>
+                                        <span class="recent-date">15 Feb, 2025</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aside-card newsletter-mini">
+                        <h3><i class="fas fa-envelope"></i> Suscríbete</h3>
+                        <p>Recibe novedades y guías prácticas cada mes en tu email.</p>
+                        <form class="newsletter-form mini">
+                            <input type="email" placeholder="Tu email" required>
+                            <button type="submit" class="btn btn-primary">Unirme</button>
+                        </form>
+                        <p class="newsletter-note"><i class="fas fa-shield-alt"></i> Respetamos tu privacidad</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
+                    <a href="index.html" class="logo">
+                        <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                    </a>
+                    <p>Conectando profesionales y clientes en toda España</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="plataforma.html">Plataforma</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir las últimas novedades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Maik&Co. — Unimos personas, solucionamos problemas.</p>
+                <p>With ♥ from The Basque Country!</p>
+                <p>&copy; 2024 Maik & Co. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Control del popup de historia
+        document.addEventListener('DOMContentLoaded', function() {
+            const historiaBtn = document.querySelector('.historia-btn');
+            const historiaPopup = document.querySelector('.historia-popup');
+            const cerrarPopup = document.querySelector('.cerrar-popup');
+
+            if (historiaBtn && historiaPopup && cerrarPopup) {
+            historiaBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                historiaPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            cerrarPopup.addEventListener('click', function() {
+                historiaPopup.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Cerrar al hacer clic fuera del contenido
+            historiaPopup.addEventListener('click', function(e) {
+                if (e.target === historiaPopup) {
+                    historiaPopup.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            }
+
+            // Filtrado por categorías
+            const categoryChips = document.querySelectorAll('.category-chips .chip');
+            const blogPosts = document.querySelectorAll('.blog-post, .featured-post');
+            const categoryChipsContainer = document.querySelector('.category-chips');
+            const blogMain = document.querySelector('.blog-main');
+            
+            if (categoryChips.length > 0 && blogPosts.length > 0) {
+                categoryChips.forEach(chip => {
+                    chip.addEventListener('click', function() {
+                        // Remover la clase active de todos los chips
+                        categoryChips.forEach(c => c.classList.remove('active'));
+                        // Agregar la clase active al chip seleccionado
+                        this.classList.add('active');
+                        
+                        // Obtener la categoría seleccionada
+                        const selectedCategory = this.getAttribute('data-category');
+                        let hasFilteredPosts = false;
+                        let visiblePosts = [];
+                        
+                        // Filtrar los artículos
+                        blogPosts.forEach(post => {
+                            if (selectedCategory === 'all') {
+                                // Mostrar todos los artículos
+                                post.style.display = '';
+                                post.classList.remove('filtered-out');
+                                if (!post.classList.contains('featured-post')) {
+                                    visiblePosts.push(post);
+                                }
+                            } else {
+                                // Ocultar o mostrar según la categoría
+                                const postCategory = post.getAttribute('data-category');
+                                if (postCategory === selectedCategory) {
+                                    post.style.display = '';
+                                    post.classList.remove('filtered-out');
+                                    if (!post.classList.contains('featured-post')) {
+                                        visiblePosts.push(post);
+                                    }
+                                    hasFilteredPosts = true;
+                                } else {
+                                    post.style.display = 'none';
+                                    post.classList.add('filtered-out');
+                                }
+                            }
+                        });
+                        
+                        // Scroll suave hacia arriba solo si hay posts filtrados y no estamos en "Todas"
+                        if (selectedCategory !== 'all' && hasFilteredPosts && categoryChipsContainer) {
+                            setTimeout(() => {
+                                window.scrollTo({
+                                    top: categoryChipsContainer.offsetTop - 100,
+                                    behavior: 'smooth'
+                                });
+                            }, 100);
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

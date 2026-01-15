@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Maik & Co.</title>
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/plataforma-cliente.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Botón móvil para abrir sidebar -->
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Overlay para móvil -->
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="plataforma-cliente.html#buscar" class="nav-item" data-section="buscar">
+                    <i class="fas fa-search"></i>
+                    <span>Buscar profesionales</span>
+                </a>
+                <a href="plataforma-cliente.html#proyectos" class="nav-item" data-section="proyectos">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Mis proyectos</span>
+                </a>
+                <a href="plataforma-cliente.html#favoritos" class="nav-item" data-section="favoritos">
+                    <i class="fas fa-star"></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="perfil-cliente.html" class="nav-item active">
+                    <i class="fas fa-user"></i>
+                    <span>Mi perfil</span>
+                </a>
+                <a href="plataforma-cliente.html#soporte" class="nav-item" data-section="soporte">
+                    <i class="fas fa-headset"></i>
+                    <span>Soporte</span>
+                </a>
+                <a href="#" class="nav-item logout" onclick="cerrarSesion()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </nav>
+        </aside>
+        <main class="dashboard-main">
+            <section class="dashboard-section active perfil-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-user"></i> Mi Perfil</h1>
+                    <p>Gestiona tu información personal y configuración de cuenta</p>
+                </div>
+                <div class="perfil-container">
+                    <form class="perfil-form" id="perfilForm">
+                        <div class="perfil-avatar-section">
+                            <div class="perfil-avatar-container">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Avatar" class="perfil-avatar" id="avatarPreview">
+                                <label class="avatar-upload-btn">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Cambiar foto</span>
+                                    <input type="file" accept="image/*" style="display:none" id="avatarInput">
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="perfil-fields">
+                            <div class="perfil-section-title">
+                                <i class="fas fa-user-circle"></i>
+                                <h3>Información Personal</h3>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-user"></i>
+                                        Nombre completo
+                                    </label>
+                                    <input type="text" value="" placeholder="Tu nombre completo" required>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-envelope"></i>
+                                        Email
+                                    </label>
+                                    <input type="email" value="" placeholder="tu@email.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-phone"></i>
+                                        Teléfono
+                                    </label>
+                                    <input type="tel" value="" placeholder="+34 600 000 000" required>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Dirección
+                                    </label>
+                                    <input type="text" value="" placeholder="Tu dirección" required>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-city"></i>
+                                        Ciudad/Provincia
+                                    </label>
+                                    <input type="text" value="" placeholder="Ciudad, provincia" required>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-birthday-cake"></i>
+                                        Fecha de nacimiento
+                                    </label>
+                                    <input type="date" value="" required>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-row">
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-venus-mars"></i>
+                                        Género
+                                    </label>
+                                    <select required>
+                                        <option value="">Selecciona</option>
+                                        <option value="hombre">Hombre</option>
+                                        <option value="mujer">Mujer</option>
+                                        <option value="otro">Otro</option>
+                                        <option value="no-decir">Prefiero no decirlo</option>
+                                    </select>
+                                </div>
+                                <div class="perfil-field">
+                                    <label>
+                                        <i class="fas fa-lock"></i>
+                                        Contraseña
+                                    </label>
+                                    <div class="password-field">
+                                        <input type="password" value="" id="passwordInput" placeholder="Nueva contraseña" required>
+                                        <button type="button" class="show-pass-btn" onclick="togglePassword()" aria-label="Mostrar/ocultar contraseña">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Guardar cambios
+                                </button>
+                                <button type="button" class="btn btn-secondary delete-account-btn" onclick="confirmDelete()">
+                                    <i class="fas fa-trash-alt"></i>
+                                    Eliminar cuenta
+                                </button>
+                            </div>
+                            
+                            <div class="perfil-feedback" id="perfilFeedback" style="display:none;">
+                                <i class="fas fa-check-circle"></i>
+                                <span>¡Cambios guardados correctamente!</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/plataforma-cliente.js"></script>
+    <script>
+        // Toggle sidebar móvil
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            sidebar.classList.toggle('open');
+            
+            if (!overlay) {
+                const newOverlay = document.createElement('div');
+                newOverlay.className = 'sidebar-overlay';
+                newOverlay.onclick = toggleSidebar;
+                document.body.appendChild(newOverlay);
+            }
+            
+            const currentOverlay = document.querySelector('.sidebar-overlay');
+            if (sidebar.classList.contains('open')) {
+                currentOverlay.classList.add('active');
+            } else {
+                currentOverlay.classList.remove('active');
+            }
+        }
+        
+        // Avatar preview
+        const avatarInput = document.getElementById('avatarInput');
+        const avatarPreview = document.getElementById('avatarPreview');
+        if (avatarInput && avatarPreview) {
+            avatarInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        avatarPreview.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+        
+        // Feedback al guardar
+        const perfilForm = document.getElementById('perfilForm');
+        const perfilFeedback = document.getElementById('perfilFeedback');
+        if (perfilForm && perfilFeedback) {
+            perfilForm.onsubmit = function(e) {
+                e.preventDefault();
+                perfilFeedback.style.display = 'flex';
+                setTimeout(()=>{ perfilFeedback.style.display = 'none'; }, 3000);
+            };
+        }
+        
+        function togglePassword() {
+            const passInput = document.getElementById('passwordInput');
+            const btn = event.target.closest('.show-pass-btn');
+            if (passInput) {
+                passInput.type = passInput.type === 'password' ? 'text' : 'password';
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-eye');
+                    icon.classList.toggle('fa-eye-slash');
+                }
+            }
+        }
+        
+        function confirmDelete() {
+            if (confirm('¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.')) {
+                alert('Cuenta eliminada (demo).');
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html> 
