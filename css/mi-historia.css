@@ -1,0 +1,610 @@
+/* ===== ESTILOS ESPECÍFICOS PARA PÁGINA DE HISTORIA PERSONAL ===== */
+
+/* Hero de Historia */
+.historia-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #4a90e2 100%);
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+}
+
+.historia-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.historia-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Stats */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+/* Sección de Portugalete */
+.portugalete-section {
+  background: var(--light-bg);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.portugalete-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.portugalete-content h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.portugalete-content p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Portugalete Features */
+.portugalete-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-item {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.feature-item h4 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Timeline Container */
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 60px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--primary-color);
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.timeline-year {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.timeline-description {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.timeline-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.highlight-tag {
+  background: var(--light-bg);
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Botón de regreso */
+.back-to-blog {
+  text-align: center;
+  padding: 40px 0;
+  background: white;
+}
+
+.back-to-blog .btn-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,102,255,0.2);
+}
+
+.back-to-blog .btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(0,102,255,0.3);
+}
+
+/* Secciones de Infancia y Adolescencia */
+.infancia-section, .adolescencia-section {
+  padding: 80px 0;
+}
+
+.infancia-section {
+  background: white;
+}
+
+.adolescencia-section {
+  background: var(--light-bg);
+}
+
+.infancia-content, .adolescencia-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.infancia-text, .adolescencia-text {
+  flex: 1;
+}
+
+.infancia-text h3, .adolescencia-text h3 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.infancia-text p, .adolescencia-text p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.infancia-text h4, .adolescencia-text h4 {
+  color: var(--primary-color);
+  margin: 20px 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.infancia-text ul, .adolescencia-text ul {
+  color: #666;
+  line-height: 1.8;
+  padding-left: 20px;
+}
+
+.infancia-text li, .adolescencia-text li {
+  margin-bottom: 8px;
+}
+
+.infancia-image, .adolescencia-image {
+  flex: 0 0 250px;
+  text-align: center;
+}
+
+.infancia-placeholder, .adolescencia-placeholder {
+  background: white;
+  border-radius: 15px;
+  padding: 40px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.infancia-placeholder span, .adolescencia-placeholder span {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.infancia-placeholder p, .adolescencia-placeholder p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.infancia-placeholder small, .adolescencia-placeholder small {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive para Historia */
+@media (max-width: 768px) {
+  .historia-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-stats {
+    gap: 30px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .timeline-item {
+    padding-left: 40px;
+  }
+  
+  .timeline-item::before {
+    left: 15px;
+  }
+  
+  .timeline-item::after {
+    left: 10px;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+  }
+  
+  .portugalete-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .infancia-content, .adolescencia-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .infancia-image, .adolescencia-image {
+    flex: none;
+  }
+}
+
+/* Sección de la Lesión */
+.lesion-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0;
+}
+
+.lesion-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.lesion-text {
+  flex: 1;
+}
+
+.lesion-text h3 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.lesion-text p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.lesion-text h4 {
+  color: var(--primary-color);
+  margin: 20px 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.lesion-text ul {
+  color: #666;
+  line-height: 1.8;
+  padding-left: 20px;
+}
+
+.lesion-text li {
+  margin-bottom: 8px;
+}
+
+.lesion-image {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.lesion-placeholder {
+  background: white;
+  border-radius: 15px;
+  padding: 40px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.lesion-placeholder span {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.lesion-placeholder p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.lesion-placeholder small {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.lesion-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.lesion-stat {
+  text-align: center;
+  padding: 10px;
+  background: var(--light-bg);
+  border-radius: 10px;
+}
+
+.lesion-stat .stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.lesion-stat .stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Secciones de Valores y Futuro */
+.valores-section {
+  background: white;
+  padding: 80px 0;
+}
+
+.futuro-section {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.valor-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.valor-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.valor-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.valor-card h3 {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.valor-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.futuro-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.futuro-text {
+  flex: 1;
+}
+
+.futuro-text h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 30px 0 20px 0;
+}
+
+.futuro-text h3:first-child {
+  margin-top: 0;
+}
+
+.futuro-text ul {
+  color: #666;
+  line-height: 1.8;
+  padding-left: 20px;
+}
+
+.futuro-text li {
+  margin-bottom: 10px;
+}
+
+.futuro-image {
+  flex: 0 0 250px;
+  text-align: center;
+}
+
+.futuro-placeholder {
+  background: white;
+  border-radius: 15px;
+  padding: 40px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.futuro-placeholder span {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.futuro-placeholder p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.futuro-placeholder small {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive para nuevas secciones */
+@media (max-width: 768px) {
+  .valores-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .futuro-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .futuro-image {
+    flex: none;
+  }
+  
+  .lesion-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .lesion-image {
+    flex: none;
+  }
+  
+  .lesion-stats {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .lesion-stat {
+    flex: 1;
+    min-width: 120px;
+  }
+}

@@ -1,291 +1,282 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Maik & Co.</title>
-    <meta name="description" content="Contacta con Maik & Co. para resolver tus dudas o solicitar información sobre nuestros servicios profesionales.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
-    
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Estilos -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contacto.css">
-    <!--GOOGLE ADSENSE-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2653535060015738"
-     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Mikel Barajas</title>
+  <meta name="description" content="Contacta con Mikel Barajas - Especialista en sistemas informáticos, ciberseguridad y desarrollo web. Consultoría técnica profesional.">
+  <link rel="icon" type="image/png" href="Img/favicon/LogoPersonal.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav-container">
-                <a href="index.html" class="logo">
-                    <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
-                </a>
-                <ul class="nav-links">
-                    <li><a href="blog.html" target="_blank">Blog</a></li>
-                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                    <li><a href="mantenimiento.html" class="btn-primary">Plataforma</a></li>
-                </ul>
-                <button class="mobile-menu-btn" aria-label="Menú">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
+<body class="page-bg">
+  <!-- Header -->
+  <header class="blog-header">
+    <div class="container">
+      <nav class="blog-nav">
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="Img/Logo/LogoPersonal.png" alt="Mikel Barajas">
+          </a>
         </div>
-    </header>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="sobre-mi.html" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="formacion.html">Formación</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="contacto-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Contacta con nosotros</h1>
-                <p>Estamos aquí para ayudarte. Envíanos tu consulta y te responderemos lo antes posible.</p>
+  <!-- Hero -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text" style="max-width: 100%; text-align: center;">
+          <h1 class="hero-title">Contacto</h1>
+          <p class="hero-subtitle">Conectemos y trabajemos juntos en tu próximo proyecto</p>
+          <p class="hero-description">
+            Estoy disponible para proyectos de ciberseguridad, administración de sistemas, desarrollo web y consultoría técnica. 
+            Mi compromiso es ofrecer soluciones de calidad que generen valor real.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="blog-main">
+    <div class="container-wide">
+      <div class="contact-layout">
+        
+        <!-- Información de Contacto -->
+        <div class="contact-info-wrapper">
+          <article class="blog-post">
+            <div class="post-header">
+              <span class="post-category">Contacto</span>
+              <h2>📧 Información de Contacto</h2>
             </div>
-        </div>
-    </section>
+            <div class="post-body">
+              <div class="contact-details-grid">
+                <div class="contact-detail-card">
+                  <div class="contact-icon">📧</div>
+                  <h3>Email</h3>
+                  <p>mikelbarajaswork@gmail.com</p>
+                  <a href="mailto:mikelbarajaswork@gmail.com" class="btn btn-primary">Enviar email</a>
+                </div>
 
-    <!-- Sección de Contacto -->
-    <section class="contacto-section">
-        <div class="container">
-            <div class="contacto-grid">
-                <!-- Formulario de Contacto -->
-                <div class="contacto-form-container">
-                    <div class="form-header">
-                        <h2>Envíanos un mensaje</h2>
-                        <p>Completa el formulario y nos pondremos en contacto contigo</p>
-                    </div>
-                    
-                    <form class="contacto-form" id="contactoForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nombre">Nombre completo *</label>
-                                <div class="input-icon">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" id="nombre" name="nombre" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <div class="input-icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="telefono">Teléfono</label>
-                                <div class="input-icon">
-                                    <i class="fas fa-phone"></i>
-                                    <input type="tel" id="telefono" name="telefono">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="asunto">Asunto *</label>
-                                <div class="input-icon">
-                                    <i class="fas fa-tag"></i>
-                                    <select id="asunto" name="asunto" required>
-                                        <option value="">Selecciona un asunto</option>
-                                        <option value="consulta-general">Consulta general</option>
-                                        <option value="soporte-tecnico">Soporte técnico</option>
-                                        <option value="registro-profesional">Registro como profesional</option>
-                                        <option value="problema-pago">Problema con el pago</option>
-                                        <option value="sugerencia">Sugerencia</option>
-                                        <option value="otro">Otro</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje *</label>
-                            <div class="input-icon">
-                                <i class="fas fa-comment"></i>
-                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="privacidad" name="privacidad" required>
-                                <span class="checkmark"></span>
-                                Acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a> y el tratamiento de mis datos *
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-lg">
-                            <i class="fas fa-paper-plane"></i>
-                            Enviar mensaje
-                        </button>
-                    </form>
+                <div class="contact-detail-card">
+                  <div class="contact-icon">💼</div>
+                  <h3>LinkedIn</h3>
+                  <p>Perfil profesional</p>
+                  <a href="https://www.linkedin.com/in/mikel-barajas-15b700399/" target="_blank" rel="noopener" class="btn btn-primary">Ver perfil</a>
+                </div>
+
+                <div class="contact-detail-card">
+                  <div class="contact-icon">📄</div>
+                  <h3>CV</h3>
+                  <p>Descarga mi currículum</p>
+                  <a href="Curriculum/CV Mikel Barajas.pdf" download="CV_Mikel_Barajas.pdf" class="btn btn-primary">Descargar CV</a>
+                </div>
+              </div>
+
+              <div class="availability-card">
+                <h3>✅ Disponibilidad</h3>
+                <p>Actualmente disponible para proyectos freelance y consultoría. Tiempo de respuesta: 24-48 horas.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Formulario de Contacto -->
+        <div class="contact-form-wrapper">
+          <article class="blog-post">
+            <div class="post-header">
+              <span class="post-category">Formulario</span>
+              <h2>✉️ Enviar Mensaje</h2>
+            </div>
+            <div class="post-body">
+              <form action="https://formsubmit.co/mikelbarajaswork@gmail.com" method="POST" class="contact-form-full">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde la web de Mikel Barajas">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Nombre completo *</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="company">Empresa/Organización</label>
+                    <input type="text" id="company" name="company" placeholder="Nombre de tu empresa (opcional)">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="service">Tipo de servicio</label>
+                    <select id="service" name="service">
+                      <option value="">Selecciona un servicio</option>
+                      <option value="ciberseguridad">Ciberseguridad</option>
+                      <option value="sistemas">Administración de Sistemas</option>
+                      <option value="desarrollo">Desarrollo Web</option>
+                      <option value="consultoria">Consultoría Técnica</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="budget">Presupuesto aproximado</label>
+                    <select id="budget" name="budget">
+                      <option value="">Selecciona un rango</option>
+                      <option value="<1000">Menos de 1.000€</option>
+                      <option value="1000-5000">1.000€ - 5.000€</option>
+                      <option value="5000-10000">5.000€ - 10.000€</option>
+                      <option value=">10000">Más de 10.000€</option>
+                      <option value="consultar">Consultar</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="timeline">Timeline del proyecto</label>
+                    <select id="timeline" name="timeline">
+                      <option value="">Selecciona un plazo</option>
+                      <option value="urgente">Urgente (1-2 semanas)</option>
+                      <option value="corto">Corto plazo (1 mes)</option>
+                      <option value="medio">Medio plazo (2-3 meses)</option>
+                      <option value="largo">Largo plazo (3+ meses)</option>
+                      <option value="flexible">Flexible</option>
+                    </select>
+                  </div>
                 </div>
                 
-                <!-- Información de Contacto -->
-                <div class="contacto-info">
-                    <div class="info-header">
-                        <h2>Información de contacto</h2>
-                        <p>Otras formas de contactarnos</p>
-                    </div>
-                    
-                    <div class="info-cards">
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Email</h3>
-                                <p>info@maikco.com</p>
-                                <p>soporte@maikco.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Teléfono</h3>
-                                <p>+34 944 123 456</p>
-                                <p>Lunes a Viernes: 9:00 - 18:00</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Ubicación</h3>
-                                <p>Bilbao, País Vasco</p>
-                                <p>España</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Horario</h3>
-                                <p>Lunes - Viernes: 9:00 - 18:00</p>
-                                <p>Sábados: 10:00 - 14:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Redes Sociales -->
-                    <div class="social-section">
-                        <h3>Síguenos en redes sociales</h3>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://t.me/-VtmpbQkB2ulxhZWM0" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                            <a href="https://www.tiktok.com/@maik.co0?_t=ZN-8yRhWI0BIOM&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Rápida -->
-    <section class="faq-rapida">
-        <div class="container">
-            <h2>Preguntas frecuentes</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>¿Cómo me registro como profesional?</h3>
-                    <p>Puedes registrarte haciendo clic en "Plataforma" en el menú superior y seleccionando "Soy Profesional". Completa el formulario con tus datos y documentos.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Cuánto tiempo tarda la verificación?</h3>
-                    <p>El proceso de verificación de profesionales suele tardar entre 24-48 horas laborables.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Cómo funciona el sistema de pagos?</h3>
-                    <p>Los pagos se procesan de forma segura a través de nuestra plataforma. El dinero se mantiene protegido hasta que el servicio se complete satisfactoriamente.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Puedo cancelar un servicio?</h3>
-                    <p>Sí, puedes cancelar un servicio antes de que comience. Consulta nuestros términos y condiciones para más detalles sobre las políticas de cancelación.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-links">
-                    <a href="index.html" class="logo">
-                        <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
-                    </a>
-                    <p>Conectando profesionales y clientes en toda España</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://t.me/-VtmpbQkB2ulxhZWM0" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="https://www.tiktok.com/@maik.co0?_t=ZN-8yRhWI0BIOM&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    </div>
+                <div class="form-group">
+                  <label for="message">Mensaje *</label>
+                  <textarea id="message" name="message" rows="6" placeholder="Describe tu proyecto, necesidades o cualquier información relevante..." required></textarea>
                 </div>
                 
-                <div class="footer-links">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="blog.html" target="_blank">Blog</a></li>
-                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                        <li><a href="plataforma.html">Plataforma</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="terminos.html">Términos y Condiciones</a></li>
-                        <li><a href="privacidad.html">Política de Privacidad</a></li>
-                        <li><a href="cookies.html">Política de Cookies</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3>Newsletter</h3>
-                    <p>Suscríbete para recibir las últimas novedades</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Tu email" required>
-                        <button type="submit" class="btn btn-primary">Suscribirse</button>
-                    </form>
-                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Enviar Mensaje</button>
+              </form>
             </div>
-            <div class="text-center mt-4">
-                <p>Maik&Co. — Unimos personas, solucionamos problemas.</p>
-                <p>With ♥ from The Basque Country!</p>
-                <p>&copy; 2025 Maik & Co. Todos los derechos reservados.</p>
-            </div>
+          </article>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/contacto.js"></script>
+      </div>
+
+      <!-- Servicios destacados -->
+      <section class="services-section">
+        <h2 class="section-title">Servicios que Ofrezco</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🔒</div>
+            <h3>Ciberseguridad</h3>
+            <p>Auditorías de seguridad, análisis de vulnerabilidades, implementación de medidas de protección y formación en seguridad informática.</p>
+            <ul>
+              <li>Análisis con Nmap y Wireshark</li>
+              <li>Penetration testing básico</li>
+              <li>Configuración de firewalls</li>
+              <li>Políticas de seguridad</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">🖥️</div>
+            <h3>Administración de Sistemas</h3>
+            <p>Gestión y mantenimiento de servidores, sistemas operativos y infraestructura tecnológica.</p>
+            <ul>
+              <li>Windows Server</li>
+              <li>Linux (Ubuntu, CentOS)</li>
+              <li>Virtualización</li>
+              <li>Backup y recuperación</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Desarrollo Web</h3>
+            <p>Desarrollo de aplicaciones web modernas, responsive y optimizadas para rendimiento.</p>
+            <ul>
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>Diseño responsive</li>
+              <li>Optimización SEO</li>
+              <li>Integración de APIs</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">💡</div>
+            <h3>Consultoría Técnica</h3>
+            <p>Asesoramiento técnico, análisis de necesidades y propuestas de soluciones tecnológicas.</p>
+            <ul>
+              <li>Análisis de requisitos</li>
+              <li>Arquitectura de soluciones</li>
+              <li>Migración de sistemas</li>
+              <li>Formación técnica</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="blog-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Mikel Barajas</h3>
+          <p>Técnico especializado en sistemas informáticos y ciberseguridad. Emprendedor y apasionado por la tecnología.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="sobre-mi.html" target="_blank" rel="noopener">Mi Historia</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="formacion.html">Formación</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Sígueme</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/mikel-barajas-15b700399/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.34 3.5 2 4.88 2 6.54c0 1.62 1.29 3 2.98 3s2.98-1.38 2.98-3c0-1.66-1.29-3.04-2.98-3.04zM2 8.95h6v12.05H2V8.95zm7.5 0h5.75v1.68h.08c.8-1.5 2.76-3.08 5.68-3.08 6.07 0 7.18 4 7.18 9.18v10.12h-6V17.75c0-2.17-.04-4.96-3.02-4.96-3.03 0-3.49 2.37-3.49 4.8v8.46h-6V8.95z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/mikel_portu/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5zm3.5-2.5a1 1 0 110 2 1 1 0 010-2z"/></svg>
+            </a>
+            <a href="https://x.com/Mikel_portu?t=FWmPD4FanWYtQRBfFVQwzg&s=09" target="_blank" rel="noopener" aria-label="Twitter">
+              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14.86A4.48 4.48 0 0022.43.36a9.07 9.07 0 01-2.88 1.1 4.52 4.52 0 00-7.7 4.13 12.84 12.84 0 01-9.3-4.71 4.51 4.51 0 001.4 6.05 4.48 4.48 0 01-2.05-.57v.06a4.5 4.5 0 003.62 4.42 4.49 4.49 0 01-2.04.08 4.53 4.53 0 004.22 3.15 9.06 9.06 0 01-5.6 1.94A9.34 9.34 0 010 19.54a12.75 12.75 0 006.92 2.03c8.3 0 12.85-6.87 12.85-12.85 0-.2 0-.39-.02-.58A9.2 9.2 0 0023 3z"/></svg>
+            </a>
+          </div>
+          <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mikel-barajas-15b700399" target="_blank" rel="noopener">Follow on LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mikel Barajas. Todos los derechos reservados.</p>
+        <p>Diseño y desarrollo: Mikel Barajas</p>
+        <p>white Basque Country❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
